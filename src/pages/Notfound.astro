@@ -5,12 +5,24 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="404">
   <main class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
     <div class="text-center">
-      <h1 class="mt-4 text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Cabieses <p>App Center</p></h1>
-      <h2 class="uppercase text-center tracking-widest text-gray-500 pt-4">404 | Not Found</h2>
-      <p class="mt-6 text-pretty text-lg font-medium text-gray-500 sm:text-xl/2">Estamos construyendo en esta pagina</p>
+      <h1 class=" font-[poppins] mt-4 text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Cabieses <p>App Center</p></h1>
+      <h2 class="uppercase text-center tracking-widest text-gray-500 pt-4 font-normal">404 | Not Found</h2>
+      <p class="mt-6 text-pretty text-lg font-normal text-[12px] text-gray-500">Estamos construyendo en esta pagina</p>
       <div class="mt-10 flex items-center justify-center gap-x-6">
-        <a href="/" class="rounded-md bg-[#005b1c] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#1ab458] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Go back home</a>
-        <a href="https://wa.me/993104578" target="_blank" class="text-sm font-semibold text-gray-900">Contact support <span aria-hidden="true">&rarr;</span></a>
+        <a 
+          href="/" 
+          class="rounded-[50px] bg-[#005b1c] h-[40px] w-[120px] flex justify-center items-center px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#1ab458] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          Regresar
+        </a>
+        <a 
+          href="https://wa.me/993104578" 
+          target="_blank" 
+          class=" bg-gray-100 h-[40px] w-[120px] rounded-[50px] flex justify-center items-center gap-2 text-sm font-normal text-gray-500">
+          Soporte
+          <span class=" text-gray-500 material-symbols-outlined">
+              chat_bubble
+          </span>
+        </a>
       </div>
       </div>
   </main>
@@ -19,11 +31,6 @@ import Layout from "../layouts/Layout.astro";
   h1 {
     font-size: 48px;
     text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
     color:#005b1c ;
-  }
-  h1 p {
-    font-size: 18px;
   }
 </style>
