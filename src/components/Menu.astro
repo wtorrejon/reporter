@@ -1,0 +1,72 @@
+---
+import imgRef from "../img/Heredia Cajavilca Pedro Enrique.jpg";
+---
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/">| Cabieses App |</a>
+    </div>
+    <div class="userMenu">
+      <div class="userMenu__item">
+        <span class="userName">Pedro Heredia</span>
+        <p class="userOcupation">Responsable de Operaciones</p>
+      </div>
+      <div class="userMenu__img">
+        <img src={imgRef.src} style="width: 40px;" alt="usuario" />
+        <!-- Reducir tamaño de imagen para móvil -->
+      </div>
+    </div>
+    <span class="menuToggle material-symbols-outlined" onclick="toggleMenu()">
+      menu
+    </span>
+    <!-- menú hamburguesa -->
+  </nav>
+  <div class="mobileMenu" id="mobileMenu">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Perfil</a></li>
+      <li><a href="#">Configuraciones</a></li>
+      <li><a href="#">Cerrar Sesión</a></li>
+    </ul>
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: #005b1c;
+  }
+  .logo a {
+    color: white;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .mobileMenu {
+    display: none;
+  }
+
+  .menuToggle {
+    color: white;
+    font-size: 40px;
+  }
+  .menuToggle:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .menuToggle {
+      display: block; /* Mostrar menú en pantallas pequeñas */
+    }
+
+    .userMenu {
+      display: none; /* Ocultar menú de usuario en móvil */
+    }
+  }
+</style>

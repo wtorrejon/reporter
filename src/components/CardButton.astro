@@ -1,0 +1,98 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  btn: string;
+  icon1: string;
+  icon2: string;
+}
+
+const { href, icon1, icon2, title, btn } = Astro.props;
+---
+
+<div class="WrapperCard">
+  <div class="CardTittle">
+    <span class="material-symbols-outlined icon1">
+      {icon1}
+    </span>
+    <span class="tittleCard">
+      {title}
+    </span>
+  </div>
+  <div class="btn_nuevo">
+    <a class="link_button" href={href}>
+      <span class="material-symbols-outlined icon2">
+        {icon2}
+      </span>
+      {btn}
+    </a>
+  </div>
+</div>
+
+<style>
+  .WrapperCard {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    height: 190px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+    border-radius: 8px;
+    background: #e7e7e7;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+  }
+  .WrapperCard:hover .icon1 {
+    color: #005b1c;
+  }
+  .WrapperCard:hover .tittleCard {
+    color: #005b1c;
+  }
+  .icon1 {
+    font-size: 48px;
+  }
+  .icon2 {
+    font-size: 24px;
+  }
+  .CardTittle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #656565;
+    font-size: 12px;
+  }
+  .btn_nuevo {
+    display: flex;
+    width: 142px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 20px;
+    background: #005b1c;
+    font-family:;
+  }
+  .btn_nuevo:hover {
+    background: #1ab458;
+    cursor: pointer;
+  }
+  .link_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+</style>
